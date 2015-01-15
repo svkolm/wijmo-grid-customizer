@@ -1,0 +1,220 @@
+body {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 12px;
+  background-image: url(assets/bg.png);
+}
+
+input,
+button {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 1em;
+}
+
+/*
+ WijGrid customization
+*/
+
+.wijmo-wijgrid {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+.wijmo-wijgrid .wijmo-wijgrid-innercell {
+  padding: 8px;
+}
+
+/* Header row */
+
+.wijmo-wijgrid tr.wijmo-wijgrid-headerrow th {
+  border-bottom: 2px solid transparent;
+}
+
+.wijmo-wijgrid .wijmo-wijgrid-headerrow .wijmo-wijgrid-innercell {
+  background: rgba(0, 0, 0, .55);
+  text-align: left;
+}
+
+.wijmo-wijgrid .wijmo-wijgrid-headerrow .wijmo-wijgrid-headertext {
+  color: #f4f4f4;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.5em 0;
+  display: inline-block;
+}
+
+/* Sort indicators */
+.wijmo-wijgrid .wijmo-wijgrid-headerrow .ui-icon {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  position: static;
+  margin-left: 5px;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.wijmo-wijgrid-headerrow .ui-icon-triangle-1-n {
+  border: 2px solid #fcfff4; border-bottom: none; border-left: none;
+}
+.wijmo-wijgrid-headerrow .ui-icon-triangle-1-s {
+  border: 2px solid #fcfff4; border-top: none; border-right: none;
+}
+
+/* Data rows */
+
+.wijmo-wijgrid tbody {
+  background: #f4f4f4;
+}
+
+.wijmo-wijgrid tr.wijmo-wijgrid-row td {
+  border: 0;
+}
+.wijmo-wijgrid tr:first-child td {
+  border-top: 1px solid #646464;
+}
+.wijmo-wijgrid tr:last-child td {
+  border-bottom: 1px solid #646464;
+}
+.wijmo-wijgrid tr.wijmo-wijgrid-row td:first-child {
+  padding-left: 2px;
+  border-left: 1px solid #646464;
+}
+.wijmo-wijgrid tr.wijmo-wijgrid-row td:last-child {
+  padding-right: 2px;
+  border-right: 1px solid #646464;
+}
+
+/* Even row */
+.wijmo-wijgrid tr.wijmo-wijgrid-alternatingrow .wijmo-wijgrid-innercell {
+  background: #e3e3e3;
+}
+
+/* Pointer row */
+.wijmo-wijgrid tr.wijmo-wijgrid-row.ui-state-hover .wijmo-wijgrid-innercell {
+  color: #fff;
+  background: rgba(74, 182, 229, .7);
+}
+
+/* Selected row */
+.wijmo-wijgrid tr.wijmo-wijgrid-row td.ui-state-highlight .wijmo-wijgrid-innercell {
+  color: #fff;
+  background: #4ab6e5;
+}
+
+/* Boolean column checkbox */
+.czr-checkbox {
+  position: relative;
+  display: inline-block;
+}
+.czr-checkbox-label {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -13px;
+  left: -10px;
+  border: 1px solid #646464;
+  background: #f4f4f4;
+}
+.czr-checkbox-label:after {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  top: 3px;
+  left: 3px;
+  border: 2px solid #fcfff4; border-top: none; border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  content: '';
+  background: transparent;
+  opacity: 0;
+}
+.czr-checkbox-checked {
+  background: #646464;
+}
+.czr-checkbox-checked:after {
+  opacity: 1;
+}
+.czr-checkbox-input {
+  visibility: hidden;
+}
+
+/* Footer */
+
+.wijmo-wijgrid .wijmo-wijgrid-footer {
+  padding: 0;
+  margin-top: 10px;
+}
+.czr-pager-btn-bl {
+  color: #646464;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.czr-pager-right-bl {
+  display: inline-block;
+  float: right;
+}
+
+.czr-go2page-input {
+  height: 28px;
+  width: 22px;
+  color: #646464;
+  background: #f4f4f4;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #d0d0d0;
+  padding: 0 4px;
+  margin-left: 10px;
+}
+
+.czr-go2page-btn,
+.czr-prev-btn,
+.czr-next-btn {
+  height: 30px;
+  color: #646464;
+  background: rgba(100, 100, 100, .3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.czr-go2page-btn {
+  width: 30px;
+}
+
+.czr-prev-btn,
+.czr-next-btn {
+  width: 70px;
+}
+
+/* Pager */
+.wijmo-wijpager a {
+  color: #646464;
+  font-weight: bold;
+  text-decoration: none;
+}
+.wijmo-wijpager a:hover {
+  color: #fff;
+  background: rgba(74, 182, 229, .7);
+}
+.wijmo-wijpager .ui-state-active {
+  color: #fff;
+  font-weight: bold;
+  background: #4ab6e5;
+}
+.wijmo-wijpager .ui-list .wijmo-wijpager-button {
+  line-height: normal;
+}
